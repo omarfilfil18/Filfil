@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct node
+{
+    char word[LENGTH + 1];
+    struct node *next;
+}
+node;
+
+
+void free_llist(node *n)
+{
+    if(n == NULL)
+      {
+          return;
+      }
+
+      if(n->next == NULL)
+      {
+          free(n);
+      }
+      else
+      {
+          free_llist(n->next);
+          free(n);
+      }
+}    
