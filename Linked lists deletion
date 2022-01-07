@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Here is how we define a "node" an element in a linked list
 typedef struct node
 {
     char word[LENGTH + 1];
@@ -8,7 +9,7 @@ typedef struct node
 }
 node;
 
-
+//this function mainly depends on recursion
 void free_llist(node *n)
 {
     if(n == NULL)
